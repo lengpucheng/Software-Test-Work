@@ -38,6 +38,7 @@ import cn.hll520.lpc.xk.Activity.PeoData.ImproActivity;
 import cn.hll520.lpc.xk.Activity.PeoData.NewPeoActivity;
 import cn.hll520.lpc.xk.Activity.PeoData.OutPeoActivity;
 import cn.hll520.lpc.xk.Activity.PeoData.upPeo;
+import cn.hll520.lpc.xk.Activity.kcb.KcbActivity;
 import cn.hll520.lpc.xk.R;
 import cn.hll520.lpc.xk.Thread.ThreadUlits;
 import cn.hll520.lpc.xk.app.APP;
@@ -273,9 +274,9 @@ public class ContactActivity extends AppCompatActivity implements AdapterView.On
             case R.id.people:
                 break;
             case R.id.classTab:
-//                Toast.makeText(this, "课表功能维护中", Toast.LENGTH_SHORT).show();
-                in = new Intent(this, MyActivity.class);
+                in = new Intent(this, KcbActivity.class);
                 startActivity(in);
+                finish();
                 break;
             case R.id.info:
                 in = new Intent(this, infolistActivity.class);

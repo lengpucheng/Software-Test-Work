@@ -31,7 +31,6 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 import cn.hll520.lpc.xk.data.Course;
 
 public class JWhelper {

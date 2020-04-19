@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">WTU</string>
-    <string name="version">v 2.8.8.1808beta</string>
+    <string name="version">v 2.9.2.1356beta</string>
     <string name="aboutApp">Power by lengpucheng @2020 IPC lpc@hll520.cn</string>
     <string name="APPlink">user lPC\'5iacg.cn MySQL</string>
     <string name="forgetpass">忘记密码</string>
@@ -10,7 +10,7 @@
     <string name="contact_Top">联系人</string>
     <string name="menu_info">消息</string>
     <string name="menu_contact">联系人</string>
-    <string name="menu_class">个人中心</string>
+    <string name="menu_class">课程表</string>
     <string name="dataID">学号</string>
     <string name="birthday">生日</string>
     <string name="campus">校区</string>
@@ -90,5 +90,14 @@
         <item>国际教育学院</item>
         <item>马克思主义学院</item>
         <item>其他</item>
+    </string-array>
+    <string-array name="week">
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+        <item>星期日</item>
     </string-array>
 </resources>

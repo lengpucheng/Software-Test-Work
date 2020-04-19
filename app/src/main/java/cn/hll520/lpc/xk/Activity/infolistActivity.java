@@ -26,6 +26,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import cn.hll520.lpc.xk.Activity.kcb.KcbActivity;
 import cn.hll520.lpc.xk.R;
 import cn.hll520.lpc.xk.Thread.ThreadUlits;
 import cn.hll520.lpc.xk.data.InfoCard;
@@ -160,9 +161,9 @@ public class infolistActivity extends AppCompatActivity implements AdapterView.O
                 finish();
                 break;
             case R.id.classTab:
-//                Toast.makeText(this, "课表功能维护中", Toast.LENGTH_SHORT).show();
-                in = new Intent(this, MyActivity.class);
+                in = new Intent(this, KcbActivity.class);
                 startActivity(in);
+                finish();
                 break;
             case R.id.info:
                 break;

@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +15,10 @@
         android:roundIcon="@mipmap/wtu"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".Activity.PeoData.OutPeoActivity"></activity>
+        <activity android:name=".Activity.kcb.LoginKcbActivity"></activity>
+        <activity android:name=".Activity.kcb.EditCourseActivity" />
+        <activity android:name=".Activity.kcb.KcbActivity" />
+        <activity android:name=".Activity.PeoData.OutPeoActivity" />
         <activity android:name=".Activity.PeoData.ImproActivity" />
         <activity android:name=".Activity.PeoData.upPeo" />
         <activity android:name=".Activity.PeoData.NewPeoActivity" />
@@ -86,6 +89,10 @@
         <provider
             android:name=".provider.InfoProvider"
             android:authorities="cn.hll520.lpc.xk.provider.InfoProvider"
+            android:exported="true" />
+        <provider
+            android:name=".Activity.kcb.CourseProvider"
+            android:authorities="cn.hll520.lpc.xk.Activity.kcb.CourseProvider"
             android:exported="true" />
     </application>
 
