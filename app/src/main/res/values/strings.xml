@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">WTU</string>
+    <string name="version">v 2.8.8.1808beta</string>
+    <string name="aboutApp">Power by lengpucheng @2020 IPC lpc@hll520.cn</string>
+    <string name="APPlink">user lPC\'5iacg.cn MySQL</string>
+    <string name="forgetpass">忘记密码</string>
+    <string name="regUser">用户注册</string>
+    <string name="LoginICO" />
+    <string name="openbt">跳过</string>
+    <string name="contact_Top">联系人</string>
+    <string name="menu_info">消息</string>
+    <string name="menu_contact">联系人</string>
+    <string name="menu_class">个人中心</string>
+    <string name="dataID">学号</string>
+    <string name="birthday">生日</string>
+    <string name="campus">校区</string>
+    <string name="college">学院</string>
+    <string name="banji">班级</string>
+    <string name="house">宿舍</string>
+    <string name="Age">年龄</string>
+    <string name="ToCall">呼叫</string>
+    <string name="shorinfo">短信</string>
+    <string name="Email">邮件</string>
+    <string name="TO">发消息</string>
+    <string name="Gender">性别</string>
+    <string name="IngSF">正在努力的加载中</string>
+    <string name="ID">学号</string>
+    <string name="ment">政治面貌</string>
+    <string name="phone">手机</string>
+    <string name="QQ">Q  Q</string>
+    <string name="YQM">邀请码</string>
+    <string name="name">姓名</string>
+    <string name="设置密保" />
+    <string name="setpassinfo">设置密保</string>
+    <string name="setPassKey">密保答案</string>
+    <string name="Mycenter">个人中心</string>
+    <string name="UpMyData">修改信息</string>
+    <string name="upviseo">单击检查更新</string>
+    <string name="info_Top">消息</string>
+    <string name="Chosement">请选择面貌</string>
+    <string name="aboutvar">根据2019年12月的JAVA程序设计的课程设计进行移动平台移植后改编而来，并且作为2020年4月的移动平台程序设计课程设计</string>
+    <string-array name="Regment">
+        <item>其他</item>
+        <item>团员</item>
+        <item>党员</item>
+        <item>预备党员</item>
+        <item>群众</item>
+    </string-array>
+    <string-array name="ChoseMent">
+        <item>全部</item>
+        <item>信科11701</item>
+        <item>信科11702</item>
+        <item>软件11701</item>
+        <item>软件11702</item>
+        <item>计科11701</item>
+        <item>应数11701</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="ChoseBanji">
+        <item>信科11701</item>
+        <item>信科11702</item>
+        <item>软件11701</item>
+        <item>软件11702</item>
+        <item>计科11701</item>
+        <item>应数11701</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="Chosecampus">
+        <item>阳光校区</item>
+        <item>南湖校区</item>
+        <item>东湖校区</item>
+    </string-array>
+    <string-array name="Chosecollege">
+        <item>艺术与设计学院</item>
+        <item>伯明翰时尚创意学院</item>
+        <item>传媒学院</item>
+        <item>服装学院</item>
+        <item>经济学院</item>
+        <item>管理学院</item>
+        <item>会计学院</item>
+        <item>外国语学院</item>
+        <item>环境工程学院</item>
+        <item>化学与化工学院</item>
+        <item>数学与计算机学院</item>
+        <item>材料科学与工程学院</item>
+        <item>机械工程与自动化学院</item>
+        <item>电子与电气工程学院</item>
+        <item>现代纺织学院</item>
+        <item>纺织科学与工程学院</item>
+        <item>国际教育学院</item>
+        <item>马克思主义学院</item>
+        <item>其他</item>
+    </string-array>
+</resources>

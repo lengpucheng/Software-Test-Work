@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 连框颜色值 -->
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+    <!--设置边框部位大小-->
+    <item
+        android:bottom="0dp"
+        android:right="0dp">
+        <shape>
+            <!-- 主体背景颜色值 -->
+            <solid android:color="#BF03A9F4" />
+        </shape>
+    </item>
+</layer-list>
