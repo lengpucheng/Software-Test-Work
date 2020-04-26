@@ -14,11 +14,11 @@
 + 软件自检模块包括“用户登录检测、软件版本更新检测、查看软件信息、软件问题反馈”功能。
 
 # 模块图
-![avator](文档说明/功能模块图.png)
+![avator](./文档说明/功能模块图.png)
 
 #页面
 
-##系统模块
+## 系统模块
 + 欢迎页面 	`ctivity_main`——`MainActivity``
 
 + 登录页面	`activity_login`——`LoginMainActivity`
@@ -27,7 +27,7 @@
 
 + 忘记密码	`activity_forgeta`——`ForgetActivity`
 
-##联系人模块
+## 联系人模块
 + 联系人页面——`activity_contact`——`ContacterActivity`
 
 + 联系人布局——`peoplelist`
@@ -44,7 +44,7 @@
 
 + 导出用户——`activity_out`——`OutActivity`
 
-##消息模块
+## 消息模块
 + 消息列表——`activity_infolist`——`InfolistActivity `   
 	消息卡片——`infocord`
 	
@@ -60,7 +60,7 @@
 
 + 新建课程——`activity_editcourse`——`EditCourseActivity`
 
-##个人中心模块
+## 个人中心模块
 
 + 个人中心——`activity_my`——`MyActivity`
 	查看个人资料——`activity_peocard`——`PeocardActivity`
