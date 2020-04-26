@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg1"
     android:orientation="vertical"
-    tools:context="cn.hll520.lpc.xk.Activity.LoginActivity">
+    tools:context="cn.hll520.lpc.SoftwareTest.Activity.LoginActivity">
 
     <ProgressBar
         android:id="@+id/RegING"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg1"
     android:orientation="vertical"
-    tools:context="cn.hll520.lpc.xk.Activity.ContactActivity">
+    tools:context="cn.hll520.lpc.SoftwareTest.Activity.ContactActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.hll520.lpc.xk">
+    package="cn.hll520.lpc.SoftwareTest">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -15,37 +15,37 @@
         android:roundIcon="@mipmap/wtu"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".Activity.kcb.LoginKcbActivity"></activity>
-        <activity android:name=".Activity.kcb.EditCourseActivity" />
-        <activity android:name=".Activity.kcb.KcbActivity" />
-        <activity android:name=".Activity.PeoData.OutPeoActivity" />
-        <activity android:name=".Activity.PeoData.ImproActivity" />
-        <activity android:name=".Activity.PeoData.upPeo" />
-        <activity android:name=".Activity.PeoData.NewPeoActivity" />
-        <activity android:name=".Activity.UpMydataActivity" />
+        <activity android:name="cn.hll520.lpc.SoftwareTest.Activity.kcb.LoginKcbActivity"></activity>
+        <activity android:name="cn.hll520.lpc.SoftwareTest.Activity.kcb.EditCourseActivity" />
+        <activity android:name="cn.hll520.lpc.SoftwareTest.Activity.kcb.KcbActivity" />
+        <activity android:name="cn.hll520.lpc.SoftwareTest.Activity.PeoData.OutPeoActivity" />
+        <activity android:name="cn.hll520.lpc.SoftwareTest.Activity.PeoData.ImproActivity" />
+        <activity android:name="cn.hll520.lpc.SoftwareTest.Activity.PeoData.upPeo" />
+        <activity android:name="cn.hll520.lpc.SoftwareTest.Activity.PeoData.NewPeoActivity" />
+        <activity android:name="cn.hll520.lpc.SoftwareTest.Activity.UpMydataActivity" />
         <activity
-            android:name=".Activity.ChatActivity"
+            android:name="cn.hll520.lpc.SoftwareTest.Activity.ChatActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".Activity.infolistActivity"
+            android:name="cn.hll520.lpc.SoftwareTest.Activity.infolistActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".Activity.AboutActivity"
+            android:name="cn.hll520.lpc.SoftwareTest.Activity.AboutActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".Activity.ReguserActivity"
+            android:name="cn.hll520.lpc.SoftwareTest.Activity.ReguserActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".Activity.ForgetActivity"
+            android:name="cn.hll520.lpc.SoftwareTest.Activity.ForgetActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".Activity.PeocardActivity"
+            android:name="cn.hll520.lpc.SoftwareTest.Activity.PeocardActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".Activity.MyActivity"
+            android:name="cn.hll520.lpc.SoftwareTest.Activity.MyActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".Activity.ContactActivity"
+            android:name="cn.hll520.lpc.SoftwareTest.Activity.ContactActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="cn.hll520.wtu.xk.MAINTWO" />
@@ -55,7 +55,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.LoginActivity"
+            android:name="cn.hll520.lpc.SoftwareTest.Activity.LoginActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="cn.hll520.wtu.xk.MAINONE" />
@@ -65,7 +65,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="cn.hll520.lpc.SoftwareTest.MainActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -75,24 +75,24 @@
         </activity>
 
         <provider
-            android:name=".provider.ContactProvider"
-            android:authorities="cn.hll520.lpc.xk.provider.ContactProvider"
+            android:name="cn.hll520.lpc.SoftwareTest.provider.ContactProvider"
+            android:authorities="cn.hll520.lpc.SoftwareTest.provider.ContactProvider"
             android:exported="true" />
         <provider
-            android:name=".provider.UserProvider"
-            android:authorities="cn.hll520.lpc.xk.provider.UserProvider"
+            android:name="cn.hll520.lpc.SoftwareTest.provider.UserProvider"
+            android:authorities="cn.hll520.lpc.SoftwareTest.provider.UserProvider"
             android:exported="true" />
         <provider
-            android:name=".provider.InfoListProvider"
-            android:authorities="cn.hll520.lpc.xk.provider.InfoListProvider"
+            android:name="cn.hll520.lpc.SoftwareTest.provider.InfoListProvider"
+            android:authorities="cn.hll520.lpc.SoftwareTest.provider.InfoListProvider"
             android:exported="true" />
         <provider
-            android:name=".provider.InfoProvider"
-            android:authorities="cn.hll520.lpc.xk.provider.InfoProvider"
+            android:name="cn.hll520.lpc.SoftwareTest.provider.InfoProvider"
+            android:authorities="cn.hll520.lpc.SoftwareTest.provider.InfoProvider"
             android:exported="true" />
         <provider
-            android:name=".Activity.kcb.CourseProvider"
-            android:authorities="cn.hll520.lpc.xk.Activity.kcb.CourseProvider"
+            android:name="cn.hll520.lpc.SoftwareTest.Activity.kcb.CourseProvider"
+            android:authorities="cn.hll520.lpc.SoftwareTest.Activity.kcb.CourseProvider"
             android:exported="true" />
     </application>
 
