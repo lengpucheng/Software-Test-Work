@@ -1,0 +1,5 @@
+地址：soft-wtu.hll520.cn
+用户名：software_test
+密码：Software_test
+数据库：software_test_work
+请仅使用当前数据库，不要尝试修改和操作其他数据库
