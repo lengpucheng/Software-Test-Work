@@ -8,7 +8,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
-        versionName "2.9.5.2230 "
+        versionName "2.9.8.2230 "
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
     }
@@ -48,4 +48,7 @@ dependencies {
     dependencies {
         api 'com.github.ok2c.hc5.android:httpclient-android:0.1.0'
     }
+    //脚本
+    //脚本
+    implementation 'io.apisense:rhino-android:1.0'
 }

@@ -27,17 +27,21 @@ import org.jsoup.nodes.Element;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import javax.script.Invocable;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
 
 import cn.hll520.lpc.SoftwareTest.data.Course;
 
 public class JWhelper {
     private static String usernam = "";//用户名
     private static String password = "";//密码
-    private static String cheack = "";//验证码
+    private static String pwdkey = "";//页面公钥
     private static String lt = "";//页面lt
     private static String JSESSION = "";//cookies 1/2
     private static String ROUTE = ""; //cookies 2/2
@@ -90,9 +94,7 @@ public class JWhelper {
         String vlue = null;
         try {
             vlue = EntityUtils.toString(entity, "UTF-8");
-        } catch (IOException e) {
-            return toEffexecute("解析错误:Get-1");
-        } catch (ParseException e) {
+        } catch (IOException | ParseException e) {
             return toEffexecute("解析错误:Get-1");
         }
         Document document = Jsoup.parseBodyFragment(vlue);//转换为文档树
@@ -101,6 +103,8 @@ public class JWhelper {
         lt = body.select("[name=lt]").attr("value");
         //得到Cookies
         Header[] headers = response.getHeaders("Set-Cookie");
+        //得到公钥
+        pwdkey = body.select("[id=pwdDefaultEncryptSalt]").attr("value");
         ROUTE = headers[0].getValue().split(";")[0].split("=")[1];
         JSESSION = headers[1].getValue().split(";")[0].split("=")[1];
 
@@ -130,12 +134,51 @@ public class JWhelper {
     }
 
     /*
+     * AES加密算法
+     * */
+    private void doAES() {
+        String url = "https://auth.wtu.edu.cn/authserver/custom/js/encrypt.js";
+        httpGet = new HttpGet(url);
+        try {
+            //获取响应内容
+            response = httpClient.execute(httpGet);
+        } catch (IOException e) {
+            e.printStackTrace();
+            toEffexecute("获取AES失败");
+        }
+        //解析内容
+        HttpEntity httpEntity = response.getEntity();
+        try {
+            //获取js
+            String js = EntityUtils.toString(httpEntity, "UTF-8");
+            //实例化一个脚本运行器
+            ScriptEngine engine = new ScriptEngineManager().getEngineByName("javascript");
+            //写入函数
+            engine.eval(js);
+            //实例化引用
+            Invocable invoke = (Invocable) engine;
+            //调用函数
+            password = (String) invoke.invokeFunction("encryptAES", password, pwdkey);
+            Log.i("JWXTEFF", "AES2PASSWORD:" + password);
+        } catch (Exception e) {
+            e.printStackTrace();
+            toEffexecute("AES加密失败");
+        }
+    }
+
+
+
+
+
+    /*
      * 第二步:POST登录 获取Location和iPlanetDirectoryPro
      * */
     public boolean login(String id, String pass, String code) {
-        this.usernam = id;
-        this.password = pass;
-        this.cheack = code;
+        usernam = id;
+        password = pass;
+        //加密
+        doAES();
+        //验证码
         String loURI = "https://auth.wtu.edu.cn/authserver/login;jsessionid=" + JSESSION + "?service=http%3A%2F%2Fjwglxt.wtu.edu.cn%2Fsso%2Fjziotlogin";
         ;
         httpPost = new HttpPost(loURI);
@@ -154,14 +197,14 @@ public class JWhelper {
         List<NameValuePair> pairs = new ArrayList<>();//创建List集合，封装表单请求参数
         pairs.add(new BasicNameValuePair("username", usernam));
         pairs.add(new BasicNameValuePair("password", password));
-        pairs.add(new BasicNameValuePair("captchaResponse", cheack));
+        pairs.add(new BasicNameValuePair("captchaResponse", code));
         pairs.add(new BasicNameValuePair("lt", lt));
         pairs.add(new BasicNameValuePair("dllt", "userNamePasswordLogin"));
         pairs.add(new BasicNameValuePair("execution", "e1s1"));
         pairs.add(new BasicNameValuePair("_eventId", "submit"));
         pairs.add(new BasicNameValuePair("rmShown", "1"));
         //创建表单的Entity对象,将表单存入其中用UTF-8编码
-        UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(pairs, Charset.forName("UTF-8"));
+        UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(pairs, StandardCharsets.UTF_8);
         //写入参数
         httpPost.setEntity(formEntity);
 
@@ -336,7 +379,7 @@ public class JWhelper {
         pairs.add(new BasicNameValuePair("xnm", year));
         pairs.add(new BasicNameValuePair("xqm", semester));
         //创建表单的Entity对象,将表单存入其中用UTF-8编码
-        UrlEncodedFormEntity formEntity =new UrlEncodedFormEntity(pairs, Charset.forName("UTF-8"));
+        UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(pairs, StandardCharsets.UTF_8);
 
         //写入参数
         httpPost.setEntity(formEntity);
